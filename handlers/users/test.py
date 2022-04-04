@@ -14,7 +14,13 @@ global markup_estet
 global markup_ex
 global markup_econ
 global add_text
-
+def pidoras(answer):
+    try:
+        answer = answer + 1
+    except:
+        print("ERRRRRRRRROR")
+        return 0
+    return answer
 
 @dp.message_handler(Command("test"))
 async def show_menu(message: types.Message, state: FSMContext):
@@ -44,7 +50,7 @@ async def q1_1(message: types.Message, state: FSMContext):
 async def q2_1(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_first')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_first=answer)
     await message.answer(text="4. Я скорее соглашусь стать:", reply_markup=markup_4_q)
 
@@ -53,7 +59,7 @@ async def q2_1(message: types.Message, state: FSMContext):
 async def q3_1(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_first')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_first=answer)
     await message.answer(text="6. На месте директора школы я прежде всего займусь:", reply_markup=markup_6_q)
 
@@ -62,7 +68,7 @@ async def q3_1(message: types.Message, state: FSMContext):
 async def q4_1(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_first')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_first=answer)
     await message.answer(text="7. На технической выставке меня больше всего привлечет:", reply_markup=markup_7_q)
 
@@ -71,7 +77,7 @@ async def q4_1(message: types.Message, state: FSMContext):
 async def q5_1(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_first')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_first=answer)
     await message.answer(text="9. В свободное от работы время я буду:", reply_markup=markup_9_q)
 
@@ -80,7 +86,7 @@ async def q5_1(message: types.Message, state: FSMContext):
 async def q6_1(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_first')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_first=answer)
     await message.answer(text="12. Если бы в моей школе было всего три кружка, я бы выбрал:", reply_markup=markup_12_q)
 
@@ -89,7 +95,7 @@ async def q6_1(message: types.Message, state: FSMContext):
 async def q7_1(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_first')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_first=answer)
     await message.answer(text="14. Я с большим интересом смотрю:", reply_markup=markup_14_q)
 
@@ -98,7 +104,7 @@ async def q7_1(message: types.Message, state: FSMContext):
 async def q8_1(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_first')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_first=answer)
     await message.answer(text="16. Школа в первую очередь должна:", reply_markup=markup_16_q)
 
@@ -107,7 +113,7 @@ async def q8_1(message: types.Message, state: FSMContext):
 async def q9_1(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_first')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_first=answer)
     await message.answer(text="17. Каждый человек должен:", reply_markup=markup_17_q)
 
@@ -116,7 +122,7 @@ async def q9_1(message: types.Message, state: FSMContext):
 async def q10_1(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_first')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_first=answer)
     await message.answer(text="19. Мне больше всего нравятся уроки:", reply_markup=markup_19_q)
 
@@ -125,7 +131,7 @@ async def q10_1(message: types.Message, state: FSMContext):
 async def q11_1(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_first')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_first=answer)
     await message.answer(text="21. Я предпочитаю читать статьи:", reply_markup=markup_21_q)
 
@@ -134,7 +140,7 @@ async def q11_1(message: types.Message, state: FSMContext):
 async def q12_1(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_first')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_first=answer)
     await get_result(message, state)
 
@@ -150,7 +156,7 @@ async def q1_2(message: types.Message, state: FSMContext):
 async def q2_2(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_second')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_second=answer)
     await message.answer(text="4. Я скорее соглашусь стать:", reply_markup=markup_4_q)
 
@@ -159,7 +165,7 @@ async def q2_2(message: types.Message, state: FSMContext):
 async def q3_2(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_second')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_second=answer)
     await message.answer(text="6. На месте директора школы я прежде всего займусь:", reply_markup=markup_6_q)
 
@@ -168,7 +174,7 @@ async def q3_2(message: types.Message, state: FSMContext):
 async def q4_2(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_second')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_second=answer)
     await message.answer(text="7. На технической выставке меня больше всего привлечет:", reply_markup=markup_7_q)
 
@@ -177,7 +183,7 @@ async def q4_2(message: types.Message, state: FSMContext):
 async def q5_2(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_second')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_second=answer)
     await message.answer(text="8. В людях я ценю прежде всего:", reply_markup=markup_8_q)
 
@@ -186,7 +192,7 @@ async def q5_2(message: types.Message, state: FSMContext):
 async def q6_2(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_second')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_second=answer)
     await message.answer(text="10. В заграничных поездках меня больше всего привлечет:", reply_markup=markup_10_q)
 
@@ -195,7 +201,7 @@ async def q6_2(message: types.Message, state: FSMContext):
 async def q7_2(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_second')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_second=answer)
     await message.answer(text="12. Если бы в моей школе было всего три кружка, я бы выбрал:", reply_markup=markup_12_q)
 
@@ -204,7 +210,7 @@ async def q7_2(message: types.Message, state: FSMContext):
 async def q8_2(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_second')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_second=answer)
     await message.answer(text="15. Мне было бы интереснее работать:", reply_markup=markup_15_q)
 
@@ -213,7 +219,7 @@ async def q8_2(message: types.Message, state: FSMContext):
 async def q9_2(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_second')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_second=answer)
     await message.answer(text="19. Мне больше всего нравятся уроки:", reply_markup=markup_19_q)
 
@@ -222,7 +228,7 @@ async def q9_2(message: types.Message, state: FSMContext):
 async def q10_2(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_second')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_second=answer)
     await message.answer(text="22. Свободное время я охотнее провожу:", reply_markup=markup_22_q)
 
@@ -231,7 +237,7 @@ async def q10_2(message: types.Message, state: FSMContext):
 async def q11_2(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_second')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_second=answer)
     await message.answer(text="23. Больший интерес у меня вызовет сообщение:", reply_markup=markup_23_q)
 
@@ -240,7 +246,7 @@ async def q11_2(message: types.Message, state: FSMContext):
 async def q12_2(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_second')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_second=answer)
     await message.answer(text="24. Я предпочитаю работать:", reply_markup=markup_24_q)
 
@@ -256,7 +262,7 @@ async def q1_3(message: types.Message, state: FSMContext):
 async def q2_3(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_third')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_third=answer)
     await message.answer(text="6. На месте директора школы я прежде всего займусь:", reply_markup=markup_6_q)
 
@@ -265,7 +271,7 @@ async def q2_3(message: types.Message, state: FSMContext):
 async def q3_3(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_third')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_third=answer)
     await message.answer(text="8. В людях я ценю прежде всего:", reply_markup=markup_8_q)
 
@@ -274,7 +280,7 @@ async def q3_3(message: types.Message, state: FSMContext):
 async def q4_3(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_third')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_third=answer)
     await message.answer(text="12. Если бы в моей школе было всего три кружка, я бы выбрал:", reply_markup=markup_12_q)
 
@@ -283,7 +289,7 @@ async def q4_3(message: types.Message, state: FSMContext):
 async def q5_3(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_third')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_third=answer)
     await message.answer(text="13. В школе больше внимания следует уделять:", reply_markup=markup_13_q)
 
@@ -292,7 +298,7 @@ async def q5_3(message: types.Message, state: FSMContext):
 async def q6_3(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_third')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_third=answer)
     await message.answer(text="16. Школа в первую очередь должна:", reply_markup=markup_16_q)
 
@@ -301,7 +307,7 @@ async def q6_3(message: types.Message, state: FSMContext):
 async def q7_3(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_third')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_third=answer)
     await message.answer(text="17. Каждый человек должен:", reply_markup=markup_17_q)
 
@@ -310,7 +316,7 @@ async def q7_3(message: types.Message, state: FSMContext):
 async def q8_3(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_third')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_third=answer)
     await message.answer(text="19. Мне больше всего нравятся уроки:", reply_markup=markup_19_q)
 
@@ -319,7 +325,7 @@ async def q8_3(message: types.Message, state: FSMContext):
 async def q9_3(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_third')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_third=answer)
     await message.answer(text="20. Мне интереснее было бы:", reply_markup=markup_20_q)
 
@@ -328,7 +334,7 @@ async def q9_3(message: types.Message, state: FSMContext):
 async def q10_3(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_third')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_third=answer)
     await message.answer(text="21. Я предпочитаю читать статьи:", reply_markup=markup_21_q)
 
@@ -337,7 +343,7 @@ async def q10_3(message: types.Message, state: FSMContext):
 async def q11_3(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_third')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_third=answer)
     await message.answer(text="22. Свободное время я охотнее провожу:", reply_markup=markup_22_q)
 
@@ -346,7 +352,7 @@ async def q11_3(message: types.Message, state: FSMContext):
 async def q12_3(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_third')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_third=answer)
     await message.answer(text="23. Больший интерес у меня вызовет сообщение:", reply_markup=markup_23_q)
 
@@ -362,7 +368,7 @@ async def q1_4(message: types.Message, state: FSMContext):
 async def q2_4(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_fourth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_fourth=answer)
     await message.answer(text="3. Меня обрадует Нобелевская премия:", reply_markup=markup_3_q)
 
@@ -371,7 +377,7 @@ async def q2_4(message: types.Message, state: FSMContext):
 async def q3_4(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_fourth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_fourth=answer)
     await message.answer(text="4. Я скорее соглашусь стать:", reply_markup=markup_4_q)
 
@@ -380,7 +386,7 @@ async def q3_4(message: types.Message, state: FSMContext):
 async def q4_4(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_fourth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_fourth=answer)
     await message.answer(text="8. В людях я ценю прежде всего:", reply_markup=markup_8_q)
 
@@ -389,7 +395,7 @@ async def q4_4(message: types.Message, state: FSMContext):
 async def q5_4(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_fourth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_fourth=answer)
     await message.answer(text="10. В заграничных поездках меня больше всего привлечет:", reply_markup=markup_10_q)
 
@@ -398,7 +404,7 @@ async def q5_4(message: types.Message, state: FSMContext):
 async def q6_4(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_fourth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_fourth=answer)
     await message.answer(text="11. Мне интереснее беседовать:", reply_markup=markup_11_q)
 
@@ -407,7 +413,7 @@ async def q6_4(message: types.Message, state: FSMContext):
 async def q7_4(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_fourth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_fourth=answer)
     await message.answer(text="13. В школе больше внимания следует уделять:", reply_markup=markup_13_q)
 
@@ -416,7 +422,7 @@ async def q7_4(message: types.Message, state: FSMContext):
 async def q8_4(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_fourth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_fourth=answer)
     await message.answer(text="15. Мне было бы интереснее работать:", reply_markup=markup_15_q)
 
@@ -425,7 +431,7 @@ async def q8_4(message: types.Message, state: FSMContext):
 async def q9_4(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_fourth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_fourth=answer)
     await message.answer(text="18. Для благополучия общества в первую очередь необходима:", reply_markup=markup_18_q)
 
@@ -434,7 +440,7 @@ async def q9_4(message: types.Message, state: FSMContext):
 async def q10_4(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_fourth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_fourth=answer)
     await message.answer(text="22. Свободное время я охотнее провожу:", reply_markup=markup_22_q)
 
@@ -443,7 +449,7 @@ async def q10_4(message: types.Message, state: FSMContext):
 async def q11_4(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_fourth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_fourth=answer)
     await message.answer(text="23. Больший интерес у меня вызовет сообщение:", reply_markup=markup_23_q)
 
@@ -452,7 +458,7 @@ async def q11_4(message: types.Message, state: FSMContext):
 async def q12_4(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_fourth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_fourth=answer)
     await message.answer(text="24. Я предпочитаю работать:", reply_markup=markup_24_q)
 
@@ -468,7 +474,7 @@ async def q1_5(message: types.Message, state: FSMContext):
 async def q2_5(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_fifth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_fifth=answer)
     await message.answer(text="5. Будущее людей определяет:", reply_markup=markup_5_q)
 
@@ -477,7 +483,7 @@ async def q2_5(message: types.Message, state: FSMContext):
 async def q3_5(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_fifth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_fifth=answer)
     await message.answer(text="9. В свободное от работы время я буду:", reply_markup=markup_9_q)
 
@@ -486,7 +492,7 @@ async def q3_5(message: types.Message, state: FSMContext):
 async def q4_5(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_fifth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_fifth=answer)
     await message.answer(text="10. В заграничных поездках меня больше всего привлечет:", reply_markup=markup_10_q)
 
@@ -495,7 +501,7 @@ async def q4_5(message: types.Message, state: FSMContext):
 async def q5_5(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_fifth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_fifth=answer)
     await message.answer(text="11. Мне интереснее беседовать:", reply_markup=markup_11_q)
 
@@ -504,7 +510,7 @@ async def q5_5(message: types.Message, state: FSMContext):
 async def q6_5(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_fifth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_fifth=answer)
     await message.answer(text="13. В школе больше внимания следует уделять:", reply_markup=markup_13_q)
 
@@ -513,7 +519,7 @@ async def q6_5(message: types.Message, state: FSMContext):
 async def q7_5(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_fifth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_fifth=answer)
     await message.answer(text="14. Я с большим интересом смотрю:", reply_markup=markup_14_q)
 
@@ -522,7 +528,7 @@ async def q7_5(message: types.Message, state: FSMContext):
 async def q8_5(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_fifth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_fifth=answer)
     await message.answer(text="15. Мне было бы интереснее работать:", reply_markup=markup_15_q)
 
@@ -531,7 +537,7 @@ async def q8_5(message: types.Message, state: FSMContext):
 async def q9_5(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_fifth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_fifth=answer)
     await message.answer(text="16. Школа в первую очередь должна:", reply_markup=markup_16_q)
 
@@ -540,7 +546,7 @@ async def q9_5(message: types.Message, state: FSMContext):
 async def q10_5(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_fifth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_fifth=answer)
     await message.answer(text="18. Для благополучия общества в первую очередь необходима:", reply_markup=markup_18_q)
 
@@ -549,7 +555,7 @@ async def q10_5(message: types.Message, state: FSMContext):
 async def q11_5(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_fifth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_fifth=answer)
     await message.answer(text="20. Мне интереснее было бы:", reply_markup=markup_20_q)
 
@@ -558,7 +564,7 @@ async def q11_5(message: types.Message, state: FSMContext):
 async def q12_5(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_fifth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_fifth=answer)
     await get_result(message, state)
 
@@ -574,7 +580,7 @@ async def q1_6(message: types.Message, state: FSMContext):
 async def q2_6(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_sixth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_sixth=answer)
     await message.answer(text="5. Будущее людей определяет:", reply_markup=markup_5_q)
 
@@ -583,7 +589,7 @@ async def q2_6(message: types.Message, state: FSMContext):
 async def q3_6(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_sixth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_sixth=answer)
     await message.answer(text="7. На технической выставке меня больше всего привлечет:", reply_markup=markup_7_q)
 
@@ -592,7 +598,7 @@ async def q3_6(message: types.Message, state: FSMContext):
 async def q4_6(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_sixth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_sixth=answer)
     await message.answer(text="9. В свободное от работы время я буду:", reply_markup=markup_9_q)
 
@@ -601,7 +607,7 @@ async def q4_6(message: types.Message, state: FSMContext):
 async def q5_6(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_sixth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_sixth=answer)
     await message.answer(text="11. Мне интереснее беседовать:", reply_markup=markup_11_q)
 
@@ -610,7 +616,7 @@ async def q5_6(message: types.Message, state: FSMContext):
 async def q6_6(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_sixth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_sixth=answer)
     await message.answer(text="14. Я с большим интересом смотрю:", reply_markup=markup_14_q)
 
@@ -619,7 +625,7 @@ async def q6_6(message: types.Message, state: FSMContext):
 async def q7_6(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_sixth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_sixth=answer)
     await message.answer(text="17. Каждый человек должен:", reply_markup=markup_17_q)
 
@@ -628,7 +634,7 @@ async def q7_6(message: types.Message, state: FSMContext):
 async def q8_6(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_sixth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_sixth=answer)
     await message.answer(text="18. Для благополучия общества в первую очередь необходима:", reply_markup=markup_18_q)
 
@@ -637,7 +643,7 @@ async def q8_6(message: types.Message, state: FSMContext):
 async def q9_6(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_sixth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_sixth=answer)
     await message.answer(text="20. Мне интереснее было бы:", reply_markup=markup_20_q)
 
@@ -646,7 +652,7 @@ async def q9_6(message: types.Message, state: FSMContext):
 async def q10_6(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_sixth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_sixth=answer)
     await message.answer(text="21. Я предпочитаю читать статьи:", reply_markup=markup_21_q)
 
@@ -655,7 +661,7 @@ async def q10_6(message: types.Message, state: FSMContext):
 async def q11_6(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_sixth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_sixth=answer)
     await message.answer(text="24. Я предпочитаю работать:", reply_markup=markup_24_q)
 
@@ -664,7 +670,7 @@ async def q11_6(message: types.Message, state: FSMContext):
 async def q12_6(message: types.Message, state: FSMContext):
     data = await state.get_data()
     answer = data.get('q_sixth')
-    answer = answer + 1
+    answer = pidoras(answer)
     await state.update_data(q_sixth=answer)
     await get_result(message, state)
 
