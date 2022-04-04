@@ -18,7 +18,7 @@ def thread_function():
         try:
             randomic = random.randint(0,10)
             print(randomic)
-            time.sleep(1200)
+            time.sleep(1)
         except:
             pass
 
