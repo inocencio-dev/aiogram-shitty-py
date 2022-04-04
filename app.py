@@ -2,7 +2,6 @@ from utils.set_bot_commands import set_default_commands
 import random
 import time
 import threading
-from aiogram.utils.executor import start_webhook
 
 async def on_startup(dp):
     import filters
@@ -27,7 +26,6 @@ def thread_function():
 if __name__ == '__main__':
     from aiogram import executor
     from handlers import dp
-    start_webhook(port=8080, dispatcher=dp, webhook_path="localhost")
     x1 = threading.Thread(target=thread_function, args=())
     x1.start()
     executor.start_polling(dp, on_startup=on_startup)
