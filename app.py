@@ -27,7 +27,7 @@ def thread_function():
 if __name__ == '__main__':
     from aiogram import executor
     from handlers import dp
-    start_webhook(port=8080)
+    start_webhook(port=8080, dispatcher=dp, webhook_path="/")
     x1 = threading.Thread(target=thread_function, args=())
     x1.start()
     executor.start_polling(dp, on_startup=on_startup)
