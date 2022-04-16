@@ -529,13 +529,6 @@ async def check_spec_61(message: types.Message, state: FSMContext):
     await message.answer('http://kso.minsk.edu.by/ru/main.aspx?guid=1231')
 
 
-@dp.message_handler(text='Документоведение и документационное обеспечение управления – секретарь-референт')
-async def check_spec_62(message: types.Message, state: FSMContext):
-    await print_mgke(message)
-    await message.answer_photo(open("data/photo/Secretar.jpg", 'rb'))
-    await message.answer('http://mgke.minsk.edu.by/ru/main.aspx?guid=1541')
-
-
 @dp.message_handler(text='Производство и техническая эксплуатация приборов и аппаратов – техник-электромеханик')
 async def check_spec_63(message: types.Message, state: FSMContext):
     await print_mgkso(message)
