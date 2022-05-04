@@ -7,7 +7,7 @@ from loader import dp
 # Эхо хендлер, куда летят текстовые сообщения без указанного состояния
 @dp.message_handler(state=None)
 async def bot_echo(message: types.Message):
-    await message.answer("https://www.youtube.com/watch?v=zfNbIaf53o4")
+    await message.answer("Нет такой команды")
 
 
 # Эхо хендлер, куда летят ВСЕ сообщения с указанным состоянием

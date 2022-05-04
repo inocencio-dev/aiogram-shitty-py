@@ -36,20 +36,6 @@ async def check_spec_4(message: types.Message, state: FSMContext):
     await message.answer('http://ptkshp.minsk.edu.by/ru/main.aspx?guid=1681')
 
 
-@dp.message_handler(text='Приемщик заказов')
-async def check_spec_5(message: types.Message, state: FSMContext):
-    await print_mgptkshp(message)
-    await message.answer_photo(open("data/photo/priemzikZakazov.jpg", 'rb'))
-    await message.answer('http://ptkshp.minsk.edu.by/ru/main.aspx?guid=1681')
-
-
-@dp.message_handler(text='Оператор прачечного оборудования')
-async def check_spec_6(message: types.Message, state: FSMContext):
-    await print_mgptklp(message)
-    await message.answer_photo(open("data/photo/operPrach.jpg", 'rb'))
-    await message.answer('http://ptk-lpbon.minsk.edu.by/ru/main.aspx?guid=3401')
-
-
 @dp.message_handler(text='Контроллер станочных и слесарных работ')
 async def check_spec_7(message: types.Message, state: FSMContext):
     await print_mgpl_3(message)
@@ -100,7 +86,9 @@ async def check_spec_12(message: types.Message, state: FSMContext):
     await print_mgptksikh(message)
     await message.answer('http://ptk-skh.minsk.edu.by/ru/main.aspx?guid=2591')
     await print_mgpl_12(message)
-    await message.answer('http://licey12.minsk.edu.by/ru/main.aspx?guid=1061')
+    await message.answer('http://licey12.minsk.edu.by/ru/main.aspx?guid=1061') 
+    await print_mgpl_7(message)
+    await message.answer('http://licey7.minsk.edu.by/run/main.aspx?guid=22521')
     await message.answer_photo(open("data/photo/electrogazosvarchik.jpg", 'rb'))
 
 
@@ -165,13 +153,6 @@ async def check_spec_18(message: types.Message, state: FSMContext):
     await message.answer_photo(open("data/photo/slesarSborchik.jpg", 'rb'))
 
 
-@dp.message_handler(text='Изолировщик на термоизоляции')
-async def check_spec_19(message: types.Message, state: FSMContext):
-    await print_mgpl_7(message)
-    await message.answer_photo(open("data/photo/izolirovchik.jpg", 'rb'))
-    await message.answer('http://licey7.minsk.edu.by/ru/main.aspx?guid=22521')
-
-
 @dp.message_handler(text='Маляр')
 async def check_spec_20(message: types.Message, state: FSMContext):
     await print_mgptkdpi(message)
@@ -215,12 +196,8 @@ async def check_spec_22(message: types.Message, state: FSMContext):
 
 @dp.message_handler(text='Каменщик')
 async def check_spec_23(message: types.Message, state: FSMContext):
-    await print_mgptkdpi(message)
-    await message.answer('http://ptk-dpi.minsk.edu.by/ru/main.aspx?guid=22861')
     await print_mgpl_5(message)
     await message.answer('https://licey5.minskedu.gov.by/')
-    await print_mgpl_7(message)
-    await message.answer('http://licey7.minsk.edu.by/ru/main.aspx?guid=22521')
     await print_mgpl_10(message)
     await message.answer('http://licey10.minsk.edu.by/ru/main.aspx?guid=1611')
     await print_mgpl_12(message)
@@ -240,8 +217,6 @@ async def check_spec_24(message: types.Message, state: FSMContext):
 async def check_spec_25(message: types.Message, state: FSMContext):
     await print_mgpl_10(message)
     await message.answer('http://licey10.minsk.edu.by/ru/main.aspx?guid=1611')
-    await print_mgptks(message)
-    await message.answer('http://ptk-stroj.minsk.edu.by/ru/main.aspx?guid=23591')
     await message.answer_photo(open("data/photo/mostovchik.jpg", 'rb'))
 
 
@@ -249,8 +224,6 @@ async def check_spec_25(message: types.Message, state: FSMContext):
 async def check_spec_26(message: types.Message, state: FSMContext):
     await print_mgpl_10(message)
     await message.answer('http://licey10.minsk.edu.by/ru/main.aspx?guid=1611')
-    await print_mgptks(message)
-    await message.answer('http://ptk-stroj.minsk.edu.by/ru/main.aspx?guid=23591')
     await message.answer_photo(open("data/photo/plotnikBetonchik.jpg", 'rb'))
 
 
@@ -288,25 +261,13 @@ async def check_spec_28(message: types.Message, state: FSMContext):
     await message.answer_photo(open("data/photo/plotnik.jpg", 'rb'))
 
 
-@dp.message_handler(text='Паркетчик')
-async def check_spec_29(message: types.Message, state: FSMContext):
-    await print_mgptks(message)
-    await message.answer_photo(open("data/photo/parketchik.jpg", 'rb'))
-    await message.answer('http://ptk-stroj.minsk.edu.by/ru/main.aspx?guid=23591')
-
-
-@dp.message_handler(text='Кровельщик по рулонным кровлям из штучных материалов')
-async def check_spec_30(message: types.Message, state: FSMContext):
-    await print_mgptks(message)
-    await message.answer_photo(open("data/photo/krovelchik.jpg", 'rb'))
-    await message.answer('http://ptk-stroj.minsk.edu.by/ru/main.aspx?guid=23591')
-
-
 @dp.message_handler(text='Монтаж наружных трубопроводов')
 async def check_spec_31(message: types.Message, state: FSMContext):
     await print_mgptkmiptr(message)
     await message.answer_photo(open("data/photo/montajNaryjnihTryb.jpg", 'rb'))
     await message.answer('http://ptk-mpt.minsk.edu.by/ru/main.aspx?guid=1771')
+    await print_mgtksikh(message)
+    await message.answer('http://ptk-skh.minsk.edu.by/ru/main.aspx?guid=2591')
 
 
 @dp.message_handler(text='Монтажник технологического оборудования и связанных с ним конструкций')
@@ -320,20 +281,6 @@ async def check_spec_32(message: types.Message, state: FSMContext):
 async def check_spec_33(message: types.Message, state: FSMContext):
     await print_mgpl_7(message)
     await message.answer_photo(open("data/photo/ovochevod.jpg", 'rb'))
-    await message.answer('http://licey7.minsk.edu.by/ru/main.aspx?guid=22521')
-
-
-@dp.message_handler(text='Рабочий зеленого строительства')
-async def check_spec_34(message: types.Message, state: FSMContext):
-    await print_mgpl_7(message)
-    await message.answer_photo(open("data/photo/rabochiyZelenogoStoit.jpg", 'rb'))
-    await message.answer('http://licey7.minsk.edu.by/ru/main.aspx?guid=22521')
-
-
-@dp.message_handler(text='Цветовод')
-async def check_spec_35(message: types.Message, state: FSMContext):
-    await print_mgpl_7(message)
-    await message.answer_photo(open("data/photo/cvetovod.jpg", 'rb'))
     await message.answer('http://licey7.minsk.edu.by/ru/main.aspx?guid=22521')
 
 
@@ -424,13 +371,6 @@ async def check_spec_46(message: types.Message, state: FSMContext):
     await message.answer('http://ptk-zht.minsk.edu.by/main.aspx?guid=1761')
 
 
-@dp.message_handler(text='Осмотрщик-ремонтник вагонов')
-async def check_spec_47(message: types.Message, state: FSMContext):
-    await print_mgptkjt(message)
-    await message.answer_photo(open("data/photo/osmotrchikVagonov.jpg", 'rb'))
-    await message.answer('http://ptk-zht.minsk.edu.by/main.aspx?guid=1761')
-
-
 @dp.message_handler(text='Помощник машиниста дизель-поезда')
 async def check_spec_48(message: types.Message, state: FSMContext):
     await print_mgptkjt(message)
@@ -470,13 +410,6 @@ async def check_spec_52(message: types.Message, state: FSMContext):
 async def check_spec_53(message: types.Message, state: FSMContext):
     await print_mgptkjt(message)
     await message.answer_photo(open("data/photo/slesarPoRemontySostava.jpg", 'rb'))
-    await message.answer('http://ptk-zht.minsk.edu.by/main.aspx?guid=1761')
-
-
-@dp.message_handler(text='Составитель поездов')
-async def check_spec_54(message: types.Message, state: FSMContext):
-    await print_mgptkjt(message)
-    await message.answer_photo(open("data/photo/sostavitelPoezdov.jpg", 'rb'))
     await message.answer('http://ptk-zht.minsk.edu.by/main.aspx?guid=1761')
 
 
@@ -550,13 +483,6 @@ async def check_spec_65(message: types.Message, state: FSMContext):
     await message.answer('http://ptk-logist.minsk.edu.by/ru/main.aspx?guid=2601')
 
 
-@dp.message_handler(text='Изготовитель художественных изделий из керамики')
-async def check_spec_66(message: types.Message, state: FSMContext):
-    await print_mgptkdpi(message)
-    await message.answer_photo(open("data/photo/izgHudIzd.jpg", 'rb'))
-    await message.answer('http://ptk-dpi.minsk.edu.by/ru/main.aspx?guid=22861')
-
-
 @dp.message_handler(text='Изготовитель художественно-оформительных работ')
 async def check_spec_67(message: types.Message, state: FSMContext):
     await print_mgptkdpi(message)
@@ -566,8 +492,6 @@ async def check_spec_67(message: types.Message, state: FSMContext):
 
 @dp.message_handler(text='Оператор компьютерной графики')
 async def check_spec_68(message: types.Message, state: FSMContext):
-    await print_mgptklp(message)
-    await message.answer('http://ptk-lpbon.minsk.edu.by/ru/main.aspx?guid=3401')
     await print_mgptkdpi(message)
     await message.answer('http://ptk-dpi.minsk.edu.by/ru/main.aspx?guid=22861')
     await message.answer_photo(open("data/photo/operKompGraf.jpg", 'rb'))
@@ -611,16 +535,10 @@ async def check_spec_73(message: types.Message, state: FSMContext):
 @dp.message_handler(text='Резчик по дереву и бересте')
 async def check_spec_74(message: types.Message, state: FSMContext):
     await print_mgpl_14(message)
-    await message.answer_photo(open("data/photo/RezchikPoDerevy.jpg", 'rb'))
     await message.answer('http://licey14.minsk.edu.by/ru/main.aspx?guid=52381')
-
-
-@dp.message_handler(text='Фотограф')
-async def check_spec_75(message: types.Message, state: FSMContext):
-    await print_mgptklp(message)
-    await message.answer_photo(open("data/photo/Fotograf.jpg", 'rb'))
-    await message.answer('http://ptk-lpbon.minsk.edu.by/ru/main.aspx?guid=3401')
-
+    await print_mgptks(message)
+    await message.answer('http://ptk-stroy.minsk.edu.by/ru/main.aspx?guid=23591')
+    await message.answer_photo(open("data/photo/RezchikPoDerevy.jpg", 'rb'))
 
 @dp.message_handler(text='Закройщик')
 async def check_spec_76(message: types.Message, state: FSMContext):
@@ -764,6 +682,8 @@ async def check_spec_93(message: types.Message, state: FSMContext):
     await print_mgpl_9(message)
     await message.answer_photo(open("data/photo/slesarElectric.jpg", 'rb'))
     await message.answer('http://licey9.minsk.edu.by/ru/main.aspx?guid=14001')
+    await print_mgptkjt(message)
+    await message.answer('http://ptk-zht.minsk.edu.by/main.aspx?guid=1761')
 
 
 @dp.message_handler(text='Электромонтер по ремонту и обслуживанию электрооборудования')
@@ -802,17 +722,3 @@ async def check_spec_96(message: types.Message, state: FSMContext):
     await print_mgpl_5(message)
     await message.answer()
     await message.answer_photo(open("data/photo/electromontajerPoOhrannoPojarnoy.jpg", 'rb'))
-
-
-@dp.message_handler(text='Аппаратчик широкого профиля производства химико-фамацевтических препаратов')
-async def check_spec_97(message: types.Message, state: FSMContext):
-    await print_mgmtpk(message)
-    await message.answer_photo(open("data/photo/apparatchik_med.jpg", 'rb'))
-    await message.answer('http://mtk.minsk.edu.by/ru/main.aspx?guid=1061')
-
-
-@dp.message_handler(text='Дозировщик медицинских препаратов')
-async def check_spec_98(message: types.Message, state: FSMContext):
-    await print_mgmtpk(message)
-    await message.answer_photo(open("data/photo/dizirovchikMed.jpg", 'rb'))
-    await message.answer()

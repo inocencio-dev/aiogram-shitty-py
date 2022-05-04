@@ -189,8 +189,6 @@ markup_parik_11 = ReplyKeyboardMarkup(resize_keyboard=True,
 
 markup_bitovoe = ReplyKeyboardMarkup(resize_keyboard=True,
                                      keyboard=[
-                                         [KeyboardButton("Приемщик заказов")],
-                                         [KeyboardButton("Оператор прачечного оборудования")],
                                          [KeyboardButton("Вернуться к списку профилей")]
                                      ]
                                      )
@@ -207,7 +205,6 @@ markup_dizign = ReplyKeyboardMarkup(resize_keyboard=True,
                                         [KeyboardButton("Печатник плоской печати")],
                                         [KeyboardButton("Печатник флексографской печати")],
                                         [KeyboardButton("Резчик по дереву и бересте")],
-                                        [KeyboardButton("Фотограф")],
                                         [KeyboardButton("Вернуться к списку профилей")]
                                     ]
                                     )
@@ -305,7 +302,6 @@ markup_slesarnie_professii = ReplyKeyboardMarkup(resize_keyboard=True,
 
 markup_otdel = ReplyKeyboardMarkup(resize_keyboard=True,
                                    keyboard=[
-                                       [KeyboardButton("Изолировщик на термоизоляции")],
                                        [KeyboardButton("Маляр")],
                                        [KeyboardButton(
                                            "Монтажник каркасно-обшивочных конструкций сухого строительства")],
@@ -334,14 +330,12 @@ markup_rab_derevo = ReplyKeyboardMarkup(resize_keyboard=True,
                                         keyboard=[
                                             [KeyboardButton("Столяр")],
                                             [KeyboardButton("Плотник")],
-                                            [KeyboardButton("Паркетчик")],
                                             [KeyboardButton("Вернуться к списку профилей")]
                                         ]
                                         )
 
 markup_stroit_tex = ReplyKeyboardMarkup(resize_keyboard=True,
                                         keyboard=[
-                                            [KeyboardButton("Кровельщик по рулонным кровлям из штучных материалов")],
                                             [KeyboardButton("Монтаж наружных трубопроводов")],
                                             [KeyboardButton(
                                                 "Монтажник технологического оборудования и связанных с ним конструкций")],
@@ -352,9 +346,6 @@ markup_stroit_tex = ReplyKeyboardMarkup(resize_keyboard=True,
 markup_sad = ReplyKeyboardMarkup(resize_keyboard=True,
                                  keyboard=[
                                      [KeyboardButton("Овощевод")],
-                                     [KeyboardButton("Рабочий зеленого строительства")],
-                                     [KeyboardButton("Цветовод")],
-                                     [KeyboardButton],
                                      [KeyboardButton("Вернуться к списку профилей")]
                                  ]
                                  )
@@ -378,23 +369,18 @@ markup_depo = ReplyKeyboardMarkup(resize_keyboard=True,
                                       [KeyboardButton("Кассир билетный")],
                                       [KeyboardButton("Монтер пути")],
                                       [KeyboardButton("Оператор дефектоскопной тележки")],
-                                      [KeyboardButton("Осмотрщик-ремонтник вагонов")],
                                       [KeyboardButton("Помощник машиниста дизель-поезда")],
                                       [KeyboardButton("Помощник машиниста тепловоза")],
                                       [KeyboardButton("Помощник машиниста электровоза")],
                                       [KeyboardButton("Помощник машиниста электропоезда")],
                                       [KeyboardButton("Проводник пассажирсткого вагона")],
                                       [KeyboardButton("Слесарь по ремонту подвижного состава")],
-                                      [KeyboardButton("Составитель поездов")],
                                       [KeyboardButton("Вернуться к списку профилей")]
                                   ]
                                   )
 
 markup_med = ReplyKeyboardMarkup(resize_keyboard=True,
                                  keyboard=[
-                                     [KeyboardButton(
-                                         "Аппаратчик широкого профиля производства химико-фамацевтических препаратов")],
-                                     [KeyboardButton("Дозировщик медицинских препаратов")],
                                      [KeyboardButton("Вернуться к списку профилей")]
                                  ]
                                  )
